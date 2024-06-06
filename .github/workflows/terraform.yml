@@ -20,6 +20,6 @@ jobs:
       - uses: ./.github/genesys-cloud-apply-terraform
       - uses: ./.github/publish-archy-flow
         with:
-          architect-results-path: /output/results.json
+          architect-results-path: /home/runner/work/byTerraform/byTerraform/output/results.json
       
       
