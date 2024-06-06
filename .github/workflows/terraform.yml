@@ -18,8 +18,11 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./.github/Install-Archy
       - uses: ./.github/genesys-cloud-apply-terraform
+      - run: |
+          pwd
       - uses: ./.github/publish-archy-flow
         with:
+          architect-flow-path: $./archy
           architect-results-path: /home/runner/work/byTerraform/byTerraform/output/results.json
       
       

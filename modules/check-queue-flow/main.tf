@@ -13,14 +13,14 @@ module "check_queue_data_action" {
 
 module "primary_queue" {
     source           = "../queues"
-    name             = "Primary_Queue_10"
+    name             = "Primary_Queue_12"
     description      = "The primary queue called from 'Queue Members Check' inbound call flow."
     queue_member_ids = var.primary_queue_member_ids
 }
 
 module "secondary_queue" {
     source           = "../queues"
-    name             = "Secondary_Queue_10"
+    name             = "Secondary_Queue_12"
     description      = "The secondary queue called from 'Queue Members Check' inbound call flow."
     queue_member_ids = var.secondary_queue_member_ids
 }
