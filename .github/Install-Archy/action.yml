@@ -16,7 +16,6 @@ runs:
         wget -q https://sdk-cdn.mypurecloud.com/archy/latest/archy-linux.zip
         unzip archy-linux.zip
         . archy version                            
-        export PATH=$PATH:$/archy
-        cd ..
+        export PATH=$PATH:/archy
         pwd
       shell: bash
