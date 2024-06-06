@@ -22,7 +22,7 @@ jobs:
           pwd
       - uses: ./.github/publish-archy-flow
         with:
-          architect-flow-path: $./archy_flow.yaml
+          architect-flow-path: /home/runner/work/byTerraform/archy_flow.yaml
           architect-results-path: /home/runner/work/byTerraform/byTerraform/output/results.json
       
       
