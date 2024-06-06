@@ -14,7 +14,7 @@ runs:
   using: "composite"
   steps:
     - run: |
-        export PATH=$PATH:$GITHUB_WORKSPACE/archy
-        archy publish --forceUnlock --file ${{inputs.architect-flow-path}} --clientId $GENESYSCLOUD_OAUTHCLIENT_ID --clientSecret $GENESYSCLOUD_OAUTHCLIENT_SECRET --location $GENESYSCLOUD_ARCHY_REGION  --overwriteResultsFile --resultsFile ${{inputs.architect-results-path}}
+        export PATH=$PATH:/archy
+        archy publish --forceUnlock --file ./archy_flow.yml --clientId $GENESYSCLOUD_OAUTHCLIENT_ID --clientSecret $GENESYSCLOUD_OAUTHCLIENT_SECRET --location $GENESYSCLOUD_ARCHY_REGION  --overwriteResultsFile --resultsFile ${{inputs.architect-results-path}}
         cat ${{inputs.architect-results-path}}
       shell: bash

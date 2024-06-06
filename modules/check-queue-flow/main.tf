@@ -24,7 +24,7 @@ module "secondary_queue" {
     description      = "The secondary queue called from 'Queue Members Check' inbound call flow."
     queue_member_ids = var.secondary_queue_member_ids
 }
-
+/*
 module "call_ivr" {
     source            = "../ivr"
     architect_flow_id = data.genesyscloud_flow.my_flow.id
@@ -49,4 +49,5 @@ resource "null_resource" "deploy_archy_flow" {
 data "genesyscloud_flow" "my_flow" {
     depends_on = [null_resource.deploy_archy_flow]
     name       = "Queue Members Check"
-}
+} 
+*/
