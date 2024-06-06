@@ -4,7 +4,6 @@ runs:
   using: "composite"
   steps:
     - run: |
-        cd ./byTerraform
         terraform init 
         terraform apply --auto-approve
       shell: bash
