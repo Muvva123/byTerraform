@@ -1,12 +1,12 @@
 
-name: Genesys Cloud Email Non-Prod Deploy
+name: Architect Flow public API
 on:
   push:
     branches: [main]
   workflow_dispatch:
 jobs:
   
-  deploy-email-flow-dev:
+  Architect_flow:
     runs-on: ubuntu-latest
     env:
       GENESYSCLOUD_OAUTHCLIENT_ID: ${{ secrets.GENESYSCLOUD_OAUTHCLIENT_ID }}
