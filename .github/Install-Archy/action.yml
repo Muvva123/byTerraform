@@ -19,5 +19,4 @@ runs:
         export PATH=$PATH:$/archy
         cd ..
         pwd
-        archy version
       shell: bash
