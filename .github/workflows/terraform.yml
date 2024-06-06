@@ -17,4 +17,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/Install-Archy
+      cd archy
       - uses: ./.github/genesys-cloud-apply-terraform
