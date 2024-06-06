@@ -38,6 +38,7 @@ resource "null_resource" "deploy_archy_flow" {
         module.check_queue_data_action
     ]
     provisioner "local-exec" {
+        working_dir="/home/runner/work/byTerraform/byTerraform/archy"
         command = ".archy publish --forceUnlock --file ./${var.archy_flow_file} --clientId $GENESYSCLOUD_OAUTHCLIENT_ID --clientSecret $GENESYSCLOUD_OAUTHCLIENT_SECRET --location $GENESYSCLOUD_ARCHY_LOCATION"
     }
 }
