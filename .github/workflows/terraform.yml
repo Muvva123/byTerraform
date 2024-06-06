@@ -1,1 +1,19 @@
-Hi
+
+name: Genesys Cloud Email Non-Prod Deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  
+  deploy-email-flow-dev:
+    runs-on: ubuntu-latest
+    env:
+      GENESYSCLOUD_OAUTHCLIENT_ID: ${{ secrets.GENESYSCLOUD_OAUTHCLIENT_ID }}
+      GENESYSCLOUD_OAUTHCLIENT_SECRET: ${{ secrets.GENESYSCLOUD_OAUTHCLIENT_SECRET }}
+      GENESYSCLOUD_API_REGION: "https://api.mypure.cloud"
+      GENESYSCLOUD_REGION: "us-east-1"
+     
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/genesys-cloud-apply-terraform

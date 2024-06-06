@@ -8,6 +8,7 @@ terraform {
 
 provider "genesyscloud" {    
     sdk_debug = true
+    
 }
 
 module "check_queue_flow" {
