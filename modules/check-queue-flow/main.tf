@@ -39,7 +39,6 @@ resource "null_resource" "deploy_archy_flow" {
     ]
     provisioner "remote-exec" {
         inline = [ 
-        bash,
         "archy publish --forceUnlock --file ./${var.archy_flow_file} --clientId $GENESYSCLOUD_OAUTHCLIENT_ID --clientSecret $GENESYSCLOUD_OAUTHCLIENT_SECRET --location $GENESYSCLOUD_ARCHY_LOCATION"
 
          ]
