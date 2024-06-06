@@ -4,7 +4,7 @@ runs:
   using: "composite"
   steps:
     - run: |
-        cd $C:\Genesys_Cloud\Github\byTerraform
+        cd ./byTerraform
         terraform init 
         terraform apply --auto-approve
       shell: bash
