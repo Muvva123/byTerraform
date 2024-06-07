@@ -40,7 +40,7 @@ resource "null_resource" "deploy_archy_flow" {
     provisioner "local-exec" {
         working_dir = "/home/runner/work/byTerraform/byTerraform/archy"
 
-        command = "./archy publish --forceUnlock --file ${var.archy_flow_file} --clientId $GENESYSCLOUD_OAUTHCLIENT_ID --clientSecret $GENESYSCLOUD_OAUTHCLIENT_SECRET --location mypurecloud.com"
+        command = "./archy publish --forceUnlock --file /home/runner/work/byTerraform/byTerraform/archy_flow.yaml --clientId $GENESYSCLOUD_OAUTHCLIENT_ID --clientSecret $GENESYSCLOUD_OAUTHCLIENT_SECRET --location mypurecloud.com"
     }
 }
 
