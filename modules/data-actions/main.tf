@@ -7,7 +7,7 @@ terraform {
 }
 
 resource "genesyscloud_integration_action" "action" {
-    name = "Agents Logged Into Queue2"
+    name = "Agents Logged Into Queue3"
 
     category       = data.genesyscloud_integration.integration.name
     integration_id = data.genesyscloud_integration.integration.id
