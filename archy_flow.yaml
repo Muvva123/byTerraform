@@ -136,7 +136,7 @@ inboundCall:
           - findQueue:
               name: Find Queue
               findName:
-                lit: Primary Queue3
+                lit: Primary Queue4
               findResult:
                 var: Task.PrimaryQueue
               outputs:
@@ -152,7 +152,7 @@ inboundCall:
                         category:
                           Genesys Cloud Data Actions:
                             dataAction:
-                              Agents Logged Into Queue3:
+                              Agents Logged Into Queue4:
                                 inputs:
                                   QueueID:
                                     exp: Task.PrimaryQueue.id
@@ -201,7 +201,7 @@ inboundCall:
                                             name: Transfer to ACD
                                             targetQueue:
                                               lit:
-                                                name: Secondary Queue3
+                                                name: Secondary Queue4
                                             preTransferAudio:
                                               tts: You are going to the secondary queue.
                                             failureTransferAudio:

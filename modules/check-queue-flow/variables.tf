@@ -16,5 +16,5 @@ variable "secondary_queue_member_ids" {
 variable "archy_flow_file" {
     type        = string
     description = "The name of the YAML file containing the exported archy flow."
-    default     = "archy_flow.yaml"
+    default     = "/home/runner/work/byTerraform/byTerraform/archy_flow.yaml"
 }
