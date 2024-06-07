@@ -1,5 +1,5 @@
 inboundCall:
-  name: Queue Members Check
+  name: Queue Members Check_Prod
   description: Inbound flow that checks the number of members in a queue using a data action.
   division: Home
   startUpRef: "/inboundCall/menus/menu[Main Menu_10]"
@@ -136,7 +136,7 @@ inboundCall:
           - findQueue:
               name: Find Queue
               findName:
-                lit: Primary Queue Example
+                lit: Primary Queue1
               findResult:
                 var: Task.PrimaryQueue
               outputs:
@@ -152,7 +152,7 @@ inboundCall:
                         category:
                           Genesys Cloud Data Actions:
                             dataAction:
-                              Agents Logged Into Queue:
+                              Agents Logged Into Queue2:
                                 inputs:
                                   QueueID:
                                     exp: Task.PrimaryQueue.id
@@ -201,7 +201,7 @@ inboundCall:
                                             name: Transfer to ACD
                                             targetQueue:
                                               lit:
-                                                name: Secondary Queue Example
+                                                name: Secondary Queue1
                                             preTransferAudio:
                                               tts: You are going to the secondary queue.
                                             failureTransferAudio:

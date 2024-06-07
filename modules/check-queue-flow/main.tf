@@ -13,18 +13,18 @@ module "check_queue_data_action" {
 
 module "primary_queue" {
     source           = "../queues"
-    name             = "Primary Queue Example"
+    name             = "Primary Queue1"
     description      = "The primary queue called from 'Queue Members Check' inbound call flow."
     queue_member_ids = var.primary_queue_member_ids
 }
 
 module "secondary_queue" {
     source           = "../queues"
-    name             = "Secondary Queue Example"
+    name             = "Secondary Queue1"
     description      = "The secondary queue called from 'Queue Members Check' inbound call flow."
     queue_member_ids = var.secondary_queue_member_ids
 }
-/*
+
 module "call_ivr" {
     source            = "../ivr"
     architect_flow_id = data.genesyscloud_flow.my_flow.id
@@ -37,12 +37,8 @@ resource "null_resource" "deploy_archy_flow" {
         module.secondary_queue,
         module.check_queue_data_action
     ]
-    provisioner "remote-exec" {
-        inline = [ 
-        "archy publish --forceUnlock --file ./${var.archy_flow_file} --clientId $GENESYSCLOUD_OAUTHCLIENT_ID --clientSecret $GENESYSCLOUD_OAUTHCLIENT_SECRET --location $GENESYSCLOUD_ARCHY_LOCATION"
-
-         ]
-        
+    provisioner "local-exec" {
+        command = "./archy publish --forceUnlock --file ./${var.archy_flow_file} --clientId $GENESYSCLOUD_OAUTHCLIENT_ID --clientSecret $GENESYSCLOUD_OAUTHCLIENT_SECRET --location mypurecloud.com"
     }
 }
 
@@ -50,4 +46,3 @@ data "genesyscloud_flow" "my_flow" {
     depends_on = [null_resource.deploy_archy_flow]
     name       = "Queue Members Check"
 } 
-*/

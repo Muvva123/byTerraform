@@ -31,7 +31,7 @@ resource "genesyscloud_integration_action" "action" {
     })
     contract_output = jsonencode({
         "$schema"     = "http://json-schema.org/draft-04/schema#",
-        "title"       = "Get Agents Logged Into Queue",
+        "title"       = "Get Agents Logged Into Queue2",
         "description" = "Agents logged into queue. A value > 0 does not guarentee that an interaction sent to this queue will be answered.",
         "type"        = "object",
         "properties" = {
