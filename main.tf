@@ -15,7 +15,7 @@ module "check_queue_flow" {
     source = "./modules/check-queue-flow"
 
     archy_flow_file            = "archy_flow.yaml"
-    did_numbers                = ["+12345678958"]
+    did_numbers                = ["+12345678959"]
     primary_queue_member_ids   = []
     secondary_queue_member_ids = []
 }

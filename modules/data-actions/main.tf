@@ -7,7 +7,7 @@ terraform {
 }
 
 resource "genesyscloud_integration_action" "action" {
-    name = "Agents Logged Into Queue"
+    name = "Agents Logged Into Queue2"
 
     category       = data.genesyscloud_integration.integration.name
     integration_id = data.genesyscloud_integration.integration.id
@@ -15,7 +15,7 @@ resource "genesyscloud_integration_action" "action" {
 
     contract_input = jsonencode({
         "$schema"     = "http://json-schema.org/draft-04/schema#",
-        "title"       = "Get Number of Agents Logged Into Queue Request",
+        "title"       = "Get Number of Agents Logged Into Queue2 Request",
         "description" = "A user ID-based request.",
         "type"        = "object",
         "required" = [

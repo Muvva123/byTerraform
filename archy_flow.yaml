@@ -136,7 +136,7 @@ inboundCall:
           - findQueue:
               name: Find Queue
               findName:
-                lit: Primary Queue1
+                lit: Primary Queue2
               findResult:
                 var: Task.PrimaryQueue
               outputs:
@@ -201,7 +201,7 @@ inboundCall:
                                             name: Transfer to ACD
                                             targetQueue:
                                               lit:
-                                                name: Secondary Queue1
+                                                name: Secondary Queue2
                                             preTransferAudio:
                                               tts: You are going to the secondary queue.
                                             failureTransferAudio:
